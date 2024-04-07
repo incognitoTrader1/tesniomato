@@ -1,0 +1,210 @@
+/*_____GENERAL PROPERTY_______________*/
+main{
+  margin: 0; 
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button { 
+  width: 100%;  
+} 
+
+.defaultHead-DSK{
+  text-align: center;
+  font-size: 25px;
+  color: var(--brand-color-green);
+  padding: 0; 
+  margin: 0;
+}
+
+.defaultBody-DSK{
+  text-align: center;
+  font-size: 17px;
+  color: var(--brand-color-green);
+  margin: 0;  
+  padding: 0; 
+}
+ 
+ 
+
+/*_____Power Calculator - PROPERTY_______________*/
+
+.power-calculator{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f9f9f9;
+}
+
+#power-calculator-result-wrapper{
+    display:none;
+}
+
+#power-calculator-result-wrapper > h2{
+    padding:0;
+    
+}
+
+#loadsContainer{ 
+  font-size: 15px; 
+  color: var(--brand-color-blue); 
+  background-color: var(--brand-color-blue-light); 
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow-x: scroll;
+}
+
+#watHolder{
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.btn-spc-small{
+  height: 20px;
+  width: 40px;
+  font-size: 10px;
+}
+
+.dynaLoads{ 
+  border-radius: 5px;  
+  margin:5px;
+  padding: 5px; 
+  text-wrap: nowrap;
+}
+
+.power-calculator-landing > h2{
+  font-size:25px; 
+  text-align:center; 
+  padding-bottom:5px; 
+  margin:0;
+}
+
+.power-calculator-landing > p{
+   font-size:16px; 
+   text-align:center;
+   margin-bottom:20px;
+}
+
+.warningTag{
+    padding:5px 10px;
+    background-color: rgba(19, 19, 19, 0.438);
+    color:white;
+    border-radius: 10px;
+    margin-bottom:20px;
+    text-align:center;
+}
+ 
+
+ .container {
+     max-width: 400px;
+     margin: 0 auto;
+     padding-left: 2.5%;
+     padding-right: 2.5%;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px; 
+ }
+ 
+ .ooo{  
+     padding: 30px 20px;
+ }
+
+ #power-calculator-result {
+     margin-top: 10px;
+     font-weight: bold;
+ }
+
+ #param44, #param55, #param66{
+  border-left: 4px solid #ff6600;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+#loads, #timeUsage{
+  padding: 2px 5px;
+  background-color: var(--brand-color-orange-light);
+}  
+/*_____END----SECTION-1_______________*/  
+ 
+
+/*_____TABLET VERSION |RESPONSIVE PROPERTY_______________*/
+
+@media(min-width: 854px){ 
+      /*_____General PROPERTY_______________*/
+      .defaultHead-DSK{
+        font-size: 25px;
+      } 
+
+      .gallery-DSK{display: block;}
+      .gallery-mobile{display: none;}
+      .g-img-dsk{width: 200px;height: 200px;}
+      .ttt{padding-left: 100px;}
+    
+      .defaultBody-DSK{
+        font-size: 16px; 
+      }  
+  
+
+  .ooo{
+    display: flex; 
+  } 
+
+  #resultWrapper{
+    width: 50%;
+    margin-left: 10px;
+  }
+ 
+     
+} 
+
+/*_____DESKTOP VERSION |RESPONSIVE PROPERTY_______________*/
+ @media(min-width: 1115px){ 
+/*_____General PROPERTY_______________*/
+.defaultHead-DSK{
+  font-size: 27px;
+}
+
+.defaultBody-DSK{
+  font-size: 17px; 
+} 
+
+.generalPopUp-child{
+  width:70%;
+  top: 25%;
+  left: 15%; 
+  right: 15%; 
+  padding-top: 80px;
+}
+ 
+  /*_____SECTION-1 PROPERTY_______________*/
+  .power-calculator-landing{
+    margin-bottom:30px;
+  }
+  .power-calculator-landing > p{
+    padding: 0 200px;
+   }
+ 
+
+
+} 
+ 
+ 
+
+ 
+ 
+
+ 
