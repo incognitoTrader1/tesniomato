@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gator | YuniVolt</title> 
+ 
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <!--header property-->
+        <link rel="stylesheet" href="./css/header.css" type="text/css">
+        <link rel="stylesheet" href="./css/global.css" type="text/css"> 
+
+   <!--Template property-->
+        <link rel="stylesheet" href="./css/structure.css" type="text/css">    
+
+    <!--Custom property-->
+        <link rel="stylesheet" href="./css/gator.css" type="text/css">
+
+    <!--Icons property-->
+        <script src="https://kit.fontawesome.com/8a74a49b20.js" crossorigin="anonymous"></script>
+        
+         
+  </head> 
+<body style="height: 100vh;">
+
+<header>  
+ 
+ <!--For Non-Logged in user -->     
+ <div>
+  <nav class="ds-flex  pd-top10px brand-bg-white pd-bottom10px" style="position: fixed; width:100%;">
+    <div class="wd80pc txtAli-left mg-left15px"> 
+      <img class="brandLogo" alt="logo" src="./images/brand/brand-logo.png" >
+    </div>
+
+    <div class="hambuger-visitor wd20pc ht30px pd-right20px txtAli-right pd-top5px">  
+      <img id="hamburger-visitor" onclick="toggleVisitor()" class="navIcon" src="./images/hamburger.png" alt="">  
+    </div> 
+
+    <div id="nav-links-desktop-wrapper" class="pd-top5px ht30px txtAli-right pd-right20px" style="text-align: right;"> 
+      <div>
+        <nav>
+          <ul class="ds-flex nav-ul-dsk"> 
+            <li style="font-weight: bold;width:100px;"><a href="#gallery" class="brand-cl-black">Gallery</a></li>
+            <li style="font-weight: bold;width:150px;"><a href="#services" class="brand-cl-black">Our Services</a></li>
+            <li style="font-weight: bold;width:100px;"><a href="#aboutUs" class="brand-cl-black">About Us</a></li>
+            <li style="font-weight: bold;width:200px;"><a href="#SSG" class="brand-cl-black">Solar-Setup-Calculator</a></li>
+            <li style="font-weight: bold;width:100px;"><a href="#contactUs" class="brand-cl-black">Contact Us</a></li>  
+          </ul>
+        </nav>
+      </div> 
+
+      <div class="ds-flex mg-left21px"> 
+        <span class="pd-left10px pd-right10px"><a style="margin: 0; padding:0;" href="signup.html"><button class="ht25px wd100px">Register</button></a></span>
+        <span><a style="margin: 0; padding:0;" href="login.html" ><button class="ht25px wd80px">Login</button></a></span>
+      </div>
+    </div>
+  </nav> 
+
+  <div id="Jenny">  
+    <span id="alert-nav-visitor" class="ds-none"> </span> 
+    <div id="side-nav-mobile-overlay-bg-visitor" class="ps-fixed ds-none ht100pc wd100pc bottom left right brand-bg-transparent zi1 cs-pointer" style="top:48px;" onclick="toggleVisitor()"></div>
+    
+    <div id="side-nav-mobile-visitor" class="ht100pc wd0 ps-fixed zi2 left0 brand-bg-white of-x-hidden pd-top20px" style="top:48px;">
+      <nav id="side-nav-mobile-links" > 
+        <ul id="side-nav-mobile-ul" class="pd-top20px pd-bottom20px pd-left10px pd-right10px wd100pc"> 
+          <div class="mo-nav-li">
+            <li class="navLink" onclick="mobileNavController('gallery')">Gallery</li> 
+          </div>
+
+          <div class="mo-nav-li">
+            <li class="navLink" onclick="mobileNavController('services')">Our Services</li> 
+          </div>
+
+          <div class="mo-nav-li">
+            <li class="navLink" onclick="mobileNavController('aboutUs')">About US</li> 
+          </div>
+
+          <div class="mo-nav-li">
+            <li class="navLink" onclick="mobileNavController('SSG')">Solar Setup Calculator</li> 
+          </div>
+
+          <div class="mo-nav-li">
+            <li class="navLink" onclick="mobileNavController('contactUs')">Contact Us</li> 
+          </div>
+        </ul> 
+        
+        <div class="ds-flex"> 
+          <span class="pd-left10px pd-right10px"><a style="margin: 0; padding:0;" href="signup.html"><button class="ht25px wd90px">Register</button></a></span>
+          <span><a style="margin: 0; padding:0;" href="login.html" ><button class="ht25px wd70px">Login</button></a></span>
+      </div>
+      </nav> 
+    </div> 
+  </div> 
+ </div>
+
+ 
+   
+</header> 
+
+<main id="main" >  
+   <!--  
+   <section id="unvailablePopUp" class="generalPopUp" style="display:none"> 
+      <div class="generalPopUp-child">
+      <form method="POST" class="mg-top41px"> 
+          <input type="text" name="access" >
+          <input type="text" name="sig" value="passCode" hidden><br><br>
+          <button class="wd100px">Send</button>
+        </form>
+      </div>
+   </section> 
+   -->   
+
+   <section id="SSG" class="power-calculator" style="display:block">
+      <div class="power-calculator-landing">
+         <h2 class="brand-cl-black">Solar System Calculator</h2>
+         <p class="pd-lr20px">
+            Find out your solar needs based on your home or office appliances.
+         </p>
+      </div> 
+         
+     <div class="ooo"> 
+      <div class="container"> 
+         <p class="warningTag">Make sure your inputs are correct!</p>
+         <!-- <label for="electricLoad">Electric Load in decimal:</label>
+         <input type="number" id="electricLoad" step="0.01" min="0" required>-->
+         <div class="ds-flex">
+           <div class="wd50pc">
+            <label for="electronic">Electronic Load:</label>
+            <input type="text" id="electronic" style="width: 120px;" placeholder="e.g Television" required>
+           </div> 
+           <div class="wd25pc">
+            <label for="electronicWat">Wat:</label><br>
+            <input type="number" id="electronicWat" style="width: 80px; height: 15px;" min="10" value="0" required>
+           </div> 
+           <div class="wd20pc txtAli-center mg-left30px pd-top5px">
+            <button class="btn-spc-small" onclick="addElectricLoad()">Add</button>
+            <button class="btn-spc-small mg-top5px" onclick="clearElectricLoad()">Reset</button>
+           </div>
+         </div>
+
+         <!--
+         <select id="questionType" onchange="addInputField()" name="answer_type">
+            <option value="none" disabled>-Select-</option>
+            <option value="text">Text</option>
+            <option value="select">Select</option>   
+         </select><br><br>-->
+
+         <div id="loadsContainer" class="ds-none"></div> 
+         <div class="ds-flex">
+            <label class="wd190px ht30px pd-top10px">Total Load (wat):</label>
+           <input type="number" id="watHolder" value="0" disabled required>
+         </div>  
+
+         <div class="ds-flex">
+           <div class="wd60pc">
+            <label for="loadTime">Power Time (Hours):</label>
+            <input type="number" id="loadTime" style="width: 120px; height: 8px;" required> 
+           </div>
+           <div class="wd30pc">
+            <label for="loadTime">Panels:</label>
+            <input type="number" id="panels" style="width: 80px; height: 8px;" value="4" required> 
+           </div>  
+         </div>  
+
+        <button class="mg-bottom20px" onclick="generateSolarSystem2()">Calculate</button> 
+      </div> 
+
+      <div id="resultWrapper" class="ds-none">
+         <h2 class="brand-cl-black ft-size19px">RESULT</h2>
+           <p id="param33" style="padding-bottom: 10px; font-size:16px;">
+              Your load is <span id="loads"></span>
+              W, and you want the setup to carry it for <span id="timeUsage"></span>
+              hours. Below is what you need:
+           </p>
+           <p id="param44" style="padding-bottom: 10px;"></p> 
+           <p id="param55" style="padding-bottom: 10px;"></p>  
+           <p id="param66" style="padding-bottom: 10px;"></p>   
+            
+      </div>
+     </div>
+   </section> 
+
+</main><!-- End #main -->   
+     
+    
+<footer> 
+    <section class="pd-bottom20px pd-top20px brand-bg-blue">  
+        <p class="ff-body brand-cl-black txtAli-center">All right reserved | <b>YuniVolt</b> @2024
+        </p>
+    </section>
+</footer>
+
+ <!--header property--> 
+ <script src="./js/header.js"></script>
+ <script src="./js/global.js"></script>
+
+   
+</html>
