@@ -27,12 +27,12 @@ background-color: rgba(34, 34, 34, 0.8);"> </div>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center" style="  position: relative;
   width: 100%;
-  padding: 100px 0;">
+  padding: 55px 0;">
     <div class="container  " style="justify-content: center; align-items: center;">
 
       <h1 style="text-align: center; font-family: 'Open Sans' , sans-serif;">YuniVolt</h1>
       <h2 style="text-align: center; font-family:'Open Sans' , sans-serif;font-weight:100;">
-        We're working hard to improve our website and we'll be ready to launch after
+        Illuminate Your Future with Clean Energy: Coming Soon – YuniVolt Solar Solutions
       </h2>
       <div class="countdown "  >
         <div>
@@ -54,13 +54,13 @@ background-color: rgba(34, 34, 34, 0.8);"> </div>
       </div> 
 
       <div class="subscribe"   >
-        <h4 style="font-weight:100;" >Subscribe now to get the latest updates!</h4>
+        <h4 style="font-weight:100;" >Subscribe for the latest updates!</h4>
         <form class="subscribe-form" style="padding: 20px;">
           <div  >
-            <input style="padding:10px; font-size:18px;border:0; background: #fff;
-            min-width: 300px;" type="email" name="email">
+            <input id="enterEmail" style="padding:10px; font-size:18px;border:0; background: #fff;
+            width:200px;" type="email" name="email" placeholder="enter email"> 
              
-            <input style="padding:10px; background: red;cursor:pointer; font-size:18px;color:#fff;
+            <input style="padding:10px; background: #33cc336b;cursor:pointer;width:100px; font-size:18px;color:#33cc33;
              border:0;" onclick="saveTextToFile()"  type="button" value="Subscribe"> 
           </div> 
         </form>
@@ -75,7 +75,7 @@ background-color: rgba(34, 34, 34, 0.8);"> </div>
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>YuniVolt</span></strong>. All Rights Reserved
+        &copy; Copyright <strong style="color: #ff6600;"><span>YuniVolt</span></strong>. All Rights Reserved
       </div> 
     </div>
   </footer><!-- End #footer -->
@@ -114,7 +114,8 @@ background-color: rgba(34, 34, 34, 0.8);"> </div>
     }, 1000);
 
     function saveTextToFile() {
-      alert("Message sent!");
+      document.getElementById("enterEmail").value = "";
+      alert("Your Email has been sent successfully!");
   }
     </script>
 
