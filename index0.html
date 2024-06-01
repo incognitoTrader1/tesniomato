@@ -1,0 +1,135 @@
+<!--
+  <?php
+if($_SERVER['REQUEST'] == 'POST' && $_POST['sig'] == 'msg'){
+  
+  $msg = $_POST['email'];
+  $msg = str_replace("\n.", "\n..", $msg); 
+  mail("instantmoneyforum@gmail.com","GetBusyHub Visitor",$msg);
+}
+ 
+?>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ComingSoon - Bootstrap Coming Soon Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+  <div id="overlay" style="position: fixed;  width: 100%; top: 0; bottom: 0; right: 0; left: 0;  z-index: -1;  
+background-color: rgba(34, 34, 34, 0.8);"> </div>
+ 
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center" style="  position: relative;
+  width: 100%;
+  padding: 100px 0;">
+    <div class="container  " style="justify-content: center; align-items: center;">
+
+      <h1 style="text-align: center; font-family: 'Open Sans' , sans-serif;">YuniVolt</h1>
+      <h2 style="text-align: center; font-family:'Open Sans' , sans-serif;font-weight:100;">
+        We're working hard to improve our website and we'll be ready to launch after
+      </h2>
+      <div class="countdown "  >
+        <div>
+          <h3 id="days"> </h3>
+          <h4>Days</h4>
+        </div>
+        <div>
+          <h3 id="hours"> </h3>
+          <h4>Hours</h4>
+        </div>
+        <div>
+          <h3 id="minutes"> </h3>
+          <h4>Minutes</h4>
+        </div>
+        <div>
+          <h3 id="seconds"> </h3>
+          <h4>Seconds</h4>
+        </div> 
+      </div> 
+
+      <div class="subscribe"   >
+        <h4 style="font-weight:100;" >Subscribe now to get the latest updates!</h4>
+        <form class="subscribe-form" style="padding: 20px;">
+          <div  >
+            <input style="padding:10px; font-size:18px;border:0; background: #fff;
+            min-width: 300px;" type="email" name="email">
+             
+            <input style="padding:10px; background: red;cursor:pointer; font-size:18px;color:#fff;
+             border:0;" onclick="saveTextToFile()"  type="button" value="Subscribe"> 
+          </div> 
+        </form>
+      </div>
+ 
+
+    </div>
+  </header><!-- End #header -->
+
+   
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>YuniVolt</span></strong>. All Rights Reserved
+      </div> 
+    </div>
+  </footer><!-- End #footer -->
+ 
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("June 9, 2024 14:08:55").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("days").innerHTML = days; 
+      document.getElementById("hours").innerHTML = hours; 
+      document.getElementById("minutes").innerHTML = minutes; 
+      document.getElementById("seconds").innerHTML = seconds;
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    function saveTextToFile() {
+      alert("Message sent!");
+  }
+    </script>
+
+</body>
+
+</html> 
