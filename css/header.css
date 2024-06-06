@@ -61,8 +61,18 @@ a{list-style: none;}
     display: none;
 }
 
-.nav-ul-dsk > li{ 
-    text-align: center;
+.nav-li-dsk{ 
+    text-align: center; 
+    font-weight: bold;
+    margin: 0 20px;
+} 
+
+.nav-li-dsk:hover{
+    border-bottom: 3px solid #ff6600; 
+}
+
+.activeNavTab{
+    border-bottom: 3px solid #ff6600; 
 }
 
 .mo-nav-li{
