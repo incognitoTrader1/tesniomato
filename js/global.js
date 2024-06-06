@@ -8,7 +8,16 @@ function profileTabController(tabName) {
     document.getElementById( tabName).style.display = "block";  
   }
    
-//_____ALL Window Onload | PROPERTY_______________________________________     
+//_____ALL Window Onload | PROPERTY_______________________________________   
+
+ function navPCActiveTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("activeNavTab-js");
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("activeNavTab");
+  }
+  document.getElementById(tabName).classList.add("activeNavTab");
+}
 
 
  function controlPopup(sectionID){
