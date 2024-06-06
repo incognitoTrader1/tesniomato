@@ -1,10 +1,38 @@
 /*_____GENERAL PROPERTY_______________*/
 main{
   margin: 0; 
-}
+} 
 
+.wa-cs-dail-btn {
+  position: -webkit-sticky;
+  position: sticky;  
+  background-color: rgba(255, 255, 255, 0);
+  height: 50px; 
+  width: 170px; 
+  top: 90vh;
+  left: 100%;
+  z-index: +999999;
+}
+.wa-cs-txt{
+  background-color: #ffffff;
+  color: #33cc33; 
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 13px;
+}
+ 
 label {
   font-weight: bold;
+}
+
+.cl-black{
+  color: black !important;
+}
+
+.cl-white{
+  color: white !important;
 }
 
 input[type="number"] {
@@ -23,10 +51,22 @@ button {
   color: var(--brand-color-green);
   opacity: 0.9;
 }
+ 
+.bs-brand{
+  box-shadow: 0px 0px 62px -16px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 0px 0px 62px -16px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 0px 62px -16px rgba(0,0,0,0.1);
+}
+
+.bs-brand-inset{
+  box-shadow: 0px 0px 62px -16px rgba(0, 255, 119, 0.2)inset;
+-webkit-box-shadow: 0px 0px 62px -16px rgba(0, 255, 119, 0.2)inset;
+-moz-box-shadow: 0px 0px 62px -16px rgba(0, 255, 119, 0.2)inset;
+}
 
 .defaultHead-DSK{
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   color: var(--brand-color-green);
   padding: 0; 
   margin: 0;
@@ -35,18 +75,24 @@ button {
 .defaultBody-DSK{
   text-align: center;
   font-size: 17px;
+  color: gray;  
+  padding: 0 20px; 
+  margin-top: 20px;
+}
+
+.servicesH3{
+  font-size: 19px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.defaultSubHead-DSK{
+  text-align: center;
+  font-size: 18px;
   color: var(--brand-color-green);
   margin: 0;  
   padding: 0; 
-}
- 
-.chest-letter{  
-  padding: 10px 20px;
-  font-size: 50px;
-  border: 5px solid #33cc33;
-  color: white;
-  border-radius: 50px; 
-}
+} 
 
 .about-img-box > img{
   width: 100%; 
@@ -54,17 +100,37 @@ button {
 
 /*_____SECTION-1 PROPERTY_______________*/
 
-.section1{  
-  background-image: linear-gradient(rgba(34, 34, 34, 0.7),
-   rgba(34, 34, 34, 0.7)), 
-   url("https://yunivolt.com/images/gallery/solarpanels.jpg"); 
+.section1{     
+  height: 100vh;
+  width: 100%; 
+}
+
+#slideshow { 
+  background-image: 
+   url("/images/gallery/dc-power/solarpanels.jpg"),
+   url("/images/gallery/dc-power/current-splash.jpg"), 
+   url("/images/gallery/dc-power/eng1.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;  
-  padding: 0 20px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background-size: cover, 0px, 0px, 0px; 
+  background-color: gray;
+  -webkit-transition: background-image 300ms linear;
+  -moz-transition: background-image 300ms linear;
+  -ms-transition: background-image 300ms linear;
+  -o-transition: background-image 300ms linear;
+  transition: background-image 300ms linear;
+   
 }
+
+.darkbg{ 
+  background-color: rgba(0, 0, 0, 0.709);
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+ 
 
 .intro-head{
   padding: 0 5px;
@@ -74,30 +140,66 @@ button {
   text-align: center;
 }
 
+.intro-head-dsk-wrapper{
+  display: none;
+}
+
+.intro-head-dsk{ 
+  padding: 0 5px;
+  margin-top: 5px; 
+  font-size: 55px;
+  font-weight:bold;
+  text-align: center;
+} 
+
 .intro-sub-head{
-padding: 0 5px;
+padding: 0 10px;
 color: white;
 text-align: center;
-margin-top: 15px;
+margin-top: 25px;
 font-size: 18px;
 } 
 
- .mySlides{
+.gallery-mobile{
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-mobile:hover{
+  transform: scale(1.09);
+}
+
+.mySlides{
   display: none;
  }
-
+ 
  /*_____SECTION-2 PROPERTY_______________*/
- .section2{  
-  padding: 50px 20px;
+ #services{   
+  background-image: url("/images/gallery/dc-power/electri-splash.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover, 0px, 0px, 0px;
+}
+
+.servicesBlackBg{
+  padding-top: 50px; 
+  padding-bottom: 30px;
+  background-color: #33cc3376;
+}
+
+.serviceMinor{
+  padding: 0 20px;
 }
 
 .serviceBox{
   text-align: center;
-  padding: 50px 30px;
+  padding: 50px 0;
   background-color: white;
   border-radius: 5px;  
   margin: 30px 0;
+  width: 100%;
+  transition: transform 0.2s ease-in-out
 } 
+.serviceBox:hover{ transform: scale(1.04)};
 
 .service-dev-img-Box{  
   text-align: center;
@@ -105,7 +207,17 @@ font-size: 18px;
 } 
 
 #mission{
-  margin-bottom: 50px;  
+  margin-bottom: 50px;   
+}
+
+ 
+.chest-letter{  
+  padding: 10px 20px;
+  font-size: 50px;
+  border: 5px solid gray; 
+  border-radius: 50px; 
+  color: #000000b1;
+  font-weight: bold;
 }
 
 #chest1{ 
@@ -153,7 +265,7 @@ font-size: 18px;
    rgba(34, 34, 34, 0.3)), url("https://yunivolt.com/images/chests/software.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;   
+  background-size: cover; 
 }
 
 /*_____About - PROPERTY_______________*/
@@ -168,6 +280,22 @@ font-size: 18px;
 
 .about-content-wrapper{ 
   padding: 30px 0;  
+} 
+
+#missions, #vissions{
+  background-color: rgba(240, 240, 240, 0.609);
+  padding: 40px 0;
+  border-radius: 20px; 
+  margin: 20px;
+}
+
+.aboutH4{
+  font-size: 17px;
+}
+
+.aboutP{
+  font-size: 15px;  
+  color: gray;   
 }
 
 
@@ -208,8 +336,21 @@ font-size: 18px;
 
 .about-content > h3, h4{ 
   font-weight: bold;
+} 
+
+.missionH2{ 
+  font-size: 22px;
+  color: var(--brand-color-orange);
+  padding: 0 20px;  
+  margin: 0; 
 }
 
+.missionBody{ 
+  font-size: 17px;
+  color: gray;  
+  padding: 0 20px; 
+  margin-top: 20px;
+}
 
 
 /*_____Meet Staff - PROPERTY_______________*/
@@ -298,20 +439,7 @@ font-size: 18px;
   margin:5px;
   padding: 5px; 
   text-wrap: nowrap;
-}
-
-.power-calculator-landing > h2{
-  font-size:25px; 
-  text-align:center; 
-  padding-bottom:5px; 
-  margin:0;
-}
-
-.power-calculator-landing > p{
-   font-size:16px; 
-   text-align:center;
-   margin-bottom:20px;
-}
+} 
 
 .warningTag{
     padding:5px 10px;
@@ -505,21 +633,55 @@ font-size: 18px;
 /*_____TABLET VERSION |RESPONSIVE PROPERTY_______________*/
 
 @media(min-width: 854px){ 
-      /*_____General PROPERTY_______________*/
-      .defaultHead-DSK{
-        font-size: 25px;
-      } 
-
-      .gallery-DSK{display: block;}
-      .gallery-mobile{display: none;}
-      .g-img-dsk{width: 200px;height: 200px;}
-      .ttt{padding-left: 100px;}
+    /*_____General PROPERTY_______________*/ 
     
-      .defaultBody-DSK{
-        font-size: 16px; 
-      } 
+    .defaultHead-DSK{ 
+      font-size: 34px; 
+    }
+    
+    .defaultBody-DSK{ 
+      font-size: 18px; 
+    }
+    
+    .servicesH3{
+      font-size: 20px; 
+    }
+    
+    .defaultSubHead-DSK{ 
+      font-size: 19px; 
+    }
+
+    .aboutH4{
+      font-size: 18px;
+    }
+    
+    .aboutP{
+      font-size: 16px;    
+    } 
+
+    .gallery-DSK{display: block;}
+    .gallery-mobile{display: none;}
+    .g-img-dsk{
+      width: 200px;
+      height: 200px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .g-img-dsk:hover{
+      transform: scale(1.2);
+    } 
 
     /*_____SECTION-1 PROPERTY_______________*/
+    .intro-head{
+      display: none;
+    }
+    .intro-head-dsk-wrapper{
+      display: initial;
+    }
+
+    .intro-sub-head{ 
+      margin-top: 30px;
+      font-size: 20px;
+    } 
 
 
    /*_____SECTION-2 PROPERTY_______________*/ 
@@ -528,8 +690,8 @@ font-size: 18px;
   } 
 
   .serviceBox{
-    margin: 20px 10px;
-  }
+    margin: 20px 20px;
+  } 
 
   .about-wrapper{
     display: flex;
@@ -538,6 +700,10 @@ font-size: 18px;
   .about-img-box{
     width: 50%;
   }
+  .about-img-wrapper{ 
+    width: 50%;
+  }
+
   .about-content-wrapper{
     padding-left: 50px;
     padding-right: 20px;
@@ -555,6 +721,11 @@ font-size: 18px;
     display: flex;
   }  
 
+  #missions, #vissions{
+    width: 50%; 
+    margin: 0 20px;
+  }
+
   .ooo{
     display: flex; 
   } 
@@ -562,15 +733,7 @@ font-size: 18px;
   #resultWrapper{
     width: 50%;
     margin-left: 10px;
-  }
-
-  .chests-sec{
-    background-image: 
-     url("./images/Rectangle-10.png"); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;  
-  }  
+  } 
     
   .abstract-obt1{ 
       margin-top: -410px;    
@@ -579,11 +742,7 @@ font-size: 18px;
     .abstract-obt3{ 
       margin-top: -400px; 
       margin-right: 0;  
-    }
-
-    #mission{
-      margin-bottom: 0; 
-    }
+    } 
   
      
 }
@@ -609,15 +768,43 @@ font-size: 18px;
 /*_____DESKTOP VERSION |RESPONSIVE PROPERTY_______________*/
  @media(min-width: 1115px){ 
 /*_____General PROPERTY_______________*/
-.defaultHead-DSK{
-  font-size: 27px;
+.defaultHead-DSK{ 
+  font-size: 36px; 
 }
 
-.defaultBody-DSK{
-  font-size: 17px; 
+.defaultBody-DSK{ 
+  font-size: 19px; 
 }
 
-.g-img-dsk{width: 300px;height: 200px;}
+.servicesH3{
+  font-size: 21px; 
+}
+
+.defaultSubHead-DSK{ 
+  font-size: 20px; 
+}
+
+.aboutH4{
+  font-size: 20px;
+}
+
+.ft-22{
+  font-size: 22px;
+}
+
+.aboutP{
+  font-size: 18px;    
+}
+
+.missionH2{ 
+  font-size: 25px; 
+}
+
+.missionBody{ 
+  font-size: 19px; 
+}
+
+.g-img-dsk{width: 250px;height: 200px;}
 .ttt{padding-left: 10px;}
 
 .generalPopUp-child{
@@ -648,17 +835,7 @@ font-size: 18px;
   /*_____SECTION-2 PROPERTY_______________*/ 
   .servicesGeneral{
     display: flex;
-  } 
-
-  .serviceBox{
-    margin: 20px 10px;
-  }
-
-  .mi-vi-wrapper{ 
-    padding: 0 10%;
-  }   
-
-  .chests-sec{display: flex;}  
+  }       
   
   .abstract-obt3{ 
     margin-top: -310px;    
@@ -673,10 +850,17 @@ font-size: 18px;
     margin-top: -270px;
     margin-right: 50px;   
   }  
+
+  .g-img-dsk{width: 270px;;}
+}
+
+/*_____Abscract 21 |RESPONSIVE PROPERTY_______________*/ 
+@media(min-width: 1300px){   
+
+  .g-img-dsk{width: 300px;;}
 }
  
 
  
  
 
- 
