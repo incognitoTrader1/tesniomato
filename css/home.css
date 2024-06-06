@@ -107,9 +107,9 @@ button {
 
 #slideshow { 
   background-image: 
-   url("/images/gallery/dc-power/solarpanels.jpg"),
-   url("/images/gallery/dc-power/current-splash.jpg"), 
-   url("/images/gallery/dc-power/eng1.jpg"); 
+   url("https://yunivolt.com/images/gallery/dc-power/solarpanels.jpg"),
+   url("https://yunivolt.com/images/gallery/dc-power/current-splash.jpg"), 
+   url("https://yunivolt.com/images/gallery/dc-power/eng1.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover, 0px, 0px, 0px; 
@@ -174,7 +174,7 @@ font-size: 18px;
  
  /*_____SECTION-2 PROPERTY_______________*/
  #services{   
-  background-image: url("/images/gallery/dc-power/electri-splash.jpg"); 
+  background-image: url("https://yunivolt.com/images/gallery/dc-power/electri-splash.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover, 0px, 0px, 0px;
