@@ -12,6 +12,7 @@ main{
   top: 90vh;
   left: 100%;
   z-index: +999999;
+  cursor: pointer;
 }
 .wa-cs-txt{
   background-color: #ffffff;
@@ -107,9 +108,9 @@ button {
 
 #slideshow { 
   background-image: 
-   url("https://yunivolt.com/images/gallery/dc-power/solarpanels.jpg"),
-   url("https://yunivolt.com/images/gallery/dc-power/current-splash.jpg"), 
-   url("https://yunivolt.com/images/gallery/dc-power/eng1.jpg"); 
+   url("/images/gallery/dc-power/solarpanels.jpg"),
+   url("/images/gallery/dc-power/current-splash.jpg"), 
+   url("/images/gallery/dc-power/eng1.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover, 0px, 0px, 0px; 
@@ -172,52 +173,53 @@ font-size: 18px;
   display: none;
  }
  
- /*_____SECTION-2 PROPERTY_______________*/
- #services{   
-  background-image: url("https://yunivolt.com/images/gallery/dc-power/electri-splash.jpg"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover, 0px, 0px, 0px;
+ /*_____SECTION-2 PROPERTY_______________*/ 
+.servicesContents-wraper{
+  display: block;
 }
 
-.servicesBlackBg{
-  padding-top: 50px; 
-  padding-bottom: 30px;
-  background-color: #33cc3376;
+.serviceBox-wraper{ 
+  display: flex;     
+  padding: 20px 5px; 
+  overflow-x: scroll;
 }
 
-.serviceMinor{
-  padding: 0 20px;
+.serviceBox-wraper{ 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.serviceBox{
-  text-align: center;
-  padding: 50px 0;
-  background-color: white;
-  border-radius: 5px;  
-  margin: 30px 0;
-  width: 100%;
-  transition: transform 0.2s ease-in-out
-} 
-.serviceBox:hover{ transform: scale(1.04)};
+.serviceBox-wraper::-webkit-scrollbar{
+  display: none;
+}
 
-.service-dev-img-Box{  
-  text-align: center;
-  margin: auto;
+.serviceBox{ 
+  background-color: rgb(255, 255, 255);  
+  width: 300px;
+  padding:20px 
+}  
+
+.serviceBox > div > p{
+  width: 200px; 
 } 
 
 #mission{
   margin-bottom: 50px;   
 }
 
+.servicesImg-wraper{
+  margin-top: 30px;
+}
+
+.services-img{
+  width: 95%;
+  height: 200px;
+  margin: 0 2.5%;
+} 
  
 .chest-letter{  
-  padding: 10px 20px;
-  font-size: 50px;
-  border: 5px solid gray; 
-  border-radius: 50px; 
-  color: #000000b1;
-  font-weight: bold;
+  padding: 10px 20px; 
+  border-radius: 50px;  
 }
 
 #chest1{ 
@@ -535,7 +537,7 @@ font-size: 18px;
 @media(min-width: 480px){ 
   .abstract-obt1{ 
     margin-top: -740px;   
-  } 
+  }  
 }
 
 /*_____Abscract 8 |RESPONSIVE PROPERTY_______________*/ 
@@ -582,6 +584,10 @@ font-size: 18px;
   .abstract-obt1{ 
     margin-top: -960px;   
   }  
+
+  .services-img{ 
+    height: 250px; 
+  }
 }
 
 /*_____Abscract 14 |RESPONSIVE PROPERTY_______________*/ 
@@ -606,7 +612,11 @@ font-size: 18px;
 @media(min-width: 710px){ 
   .abstract-obt1{ 
     margin-top: -1060px;   
-  }   
+  } 
+  
+  .services-img{ 
+    height: 300px; 
+  }
 }
 
 /*_____Abscract 17 |RESPONSIVE PROPERTY_______________*/ 
@@ -684,14 +694,7 @@ font-size: 18px;
     } 
 
 
-   /*_____SECTION-2 PROPERTY_______________*/ 
-   .serviceMinor{
-    display: flex;
-  } 
-
-  .serviceBox{
-    margin: 20px 20px;
-  } 
+   /*_____SECTION-2 PROPERTY_______________*/   
 
   .about-wrapper{
     display: flex;
@@ -804,8 +807,13 @@ font-size: 18px;
   font-size: 19px; 
 }
 
-.g-img-dsk{width: 250px;height: 200px;}
-.ttt{padding-left: 10px;}
+.g-img-dsk{
+  width: 250px;height: 200px;
+}
+
+.ttt{
+  padding-left: 10px;
+}
 
 .generalPopUp-child{
   width:70%;
@@ -828,9 +836,10 @@ font-size: 18px;
   .power-calculator-landing{
     margin-bottom:30px;
   }
+
   .power-calculator-landing > p{
     padding: 0 200px;
-   }
+  }
 
   /*_____SECTION-2 PROPERTY_______________*/ 
   .servicesGeneral{
@@ -839,6 +848,39 @@ font-size: 18px;
   
   .abstract-obt3{ 
     margin-top: -310px;    
+  }  
+
+  .servicesContents-wraper{
+    display: flex;
+  }
+
+  .servicesImg-wraper{
+    width: 50%;
+  }
+
+  .serviceBox-wraper{
+    width: 50%;
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .services-img-pc{
+    display: block;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+
+  .services-img{
+    display: none; 
+  }
+
+  .serviceBox{
+    width: 90%;  
+  }
+
+  .serviceBox > div > p{
+    width: 90%;  
   }
 
 
